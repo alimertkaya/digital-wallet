@@ -1,0 +1,20 @@
+package com.alimertkaya.digitalwallet.exchangerate.service;
+
+import com.alimertkaya.digitalwallet.exchangerate.entity.ExchangeRate;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.math.BigDecimal;
+
+public interface ExchangeRateService {
+
+    Mono<Void> syncExchangeRates();
+
+    // doviz cifti icin kuru gunceller veya olusturur
+    Mono<ExchangeRate> updateExchangeRate(String sourceCurrency, String targetCurrency, BigDecimal rate);
+
+    // tutari, source -> target a guncel kur ile cevirir
+    Mono<BigDecimal> convertCurrency(BigDecimal amount, String sourceCurrency, String targetCurrency);
+
+    Flux<ExchangeRate> getAllRates();
+}

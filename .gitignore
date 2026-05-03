@@ -1,0 +1,56 @@
+# ─── Secrets & Environment ────────────────────────────────────────────────────
+.env
+*.env
+.env.*
+.env.local
+
+# ─── Backend (Spring Boot / Maven) ────────────────────────────────────────────
+target/
+*.jar
+*.war
+*.class
+
+# Local dev properties (contains DB credentials)
+digital-wallet-backend/src/main/resources/application-dev.properties
+digital-wallet-backend/src/main/resources/application-prod.properties
+
+# ─── Frontend (React Native) ──────────────────────────────────────────────────
+digital-wallet-frontend/node_modules/
+
+# Android
+digital-wallet-frontend/android/local.properties
+digital-wallet-frontend/android/app/debug.keystore
+digital-wallet-frontend/android/app/release.keystore
+digital-wallet-frontend/android/.gradle/
+digital-wallet-frontend/android/app/build/
+digital-wallet-frontend/android/build/
+*.keystore
+*.jks
+
+# iOS
+digital-wallet-frontend/ios/Pods/
+digital-wallet-frontend/ios/build/
+digital-wallet-frontend/ios/*.xcworkspace/xcuserdata/
+digital-wallet-frontend/ios/*.xcodeproj/xcuserdata/
+digital-wallet-frontend/ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Metro bundler cache
+digital-wallet-frontend/.metro-cache/
+
+# ─── Claude ───────────────────────────────────────────────────────────────────
+CLAUDE.md
+.claude/
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
